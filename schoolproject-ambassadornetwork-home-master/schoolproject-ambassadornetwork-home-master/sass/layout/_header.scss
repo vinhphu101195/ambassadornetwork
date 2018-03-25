@@ -1,0 +1,47 @@
+.header {
+    position: relative;
+    height: 60rem;
+    &__content {
+        height: 100%;
+        width: 100%;
+        background-image: url("../img/ambassadors_bannerikuva_01.jpg");
+        background-size: cover;
+    }
+
+    & .navbar {
+        width: 100%;
+        position: absolute;
+        @include center-element;
+        top: 100%;
+    }
+
+    &__heading {
+        @include center-element;
+        color: $color-white-1;
+        font-size: 80px;
+        padding: 1rem 2rem;
+        border: 6px solid $color-white-1;
+        cursor: default;
+
+         @include respond(screen-1440) {
+             font-size: 50px;
+         }
+         @include respond(screen-768) {
+             font-size: 25px;
+         }
+          @include respond(screen-425) {
+              width: 50%;
+              text-align: center;
+          }
+    }
+    &__logo {
+        height: 10rem;
+        width: 40rem;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-image: url("../img/logo.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}

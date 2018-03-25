@@ -1,0 +1,59 @@
+/* luu y:Trinh duyet se tu dong apply magin va pading */
+
+/* Cleaning */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* Change box model => border and padding of box are nolonger added */
+    box-sizing: inherit;
+}
+
+a {
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+/* root */
+
+html {
+    font-size: 50%;
+    @include respond(screen-2560) {
+        font-size: 50%;
+    }
+    @include respond(screen-1800) {
+        font-size: 50%;
+    }
+    @include respond(screen-1440) {
+        font-size: 30%;
+    }
+    @include respond(screen-1200) {
+        font-size: 30%;
+    }
+    @include respond(screen-1024) {
+        font-size: 30%;
+    }
+    @include respond(screen-768) {
+        font-size: 30%;
+    }
+    @include respond(screen-425) {
+        font-size: 25%;
+    }
+    @include respond(screen-320) {
+        font-size: 25%;
+    }
+}
+
+body {
+    background-color: $color-grey-2;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-1;
+    padding: 0rem;
+}

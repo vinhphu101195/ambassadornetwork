@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Standard HTML5 Web App Template</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+    <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, and is needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+    
+    <link rel="stylesheet" type = "text/css" href="css/normalize.css">
+    <link rel="stylesheet" type = "text/css" href="css/grid.css">
+    <link rel="stylesheet" type = "text/css" href= "css/ionicons.min.css" >
+    <link rel="stylesheet" type = "text/css" href= "css/animate.css" >
+    <link rel="stylesheet" type = "text/css" href= "css/style1.css" >
+
+    
+
+    <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
+    <!-- <script src="cordova.js"></script> -->          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <!-- <script src="js/app.js"></script> -->           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <!-- <script src="xdk/init-dev.js"></script> -->     <!-- normalizes device and document ready events, see README for details -->
+</head>
+
+<body>
+    
+    <div class="navbutton">
+        <input type="checkbox" class="navbutton__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navbutton__button">
+            <span class="navbutton__icon"></span>
+        </label>
+
+        <div class="navbutton__background">&nbsp;</div>
+        <div class="navbutton__nav">
+            <ul class="navbutton__list">
+                <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">Home</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">About</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">Ambassador</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">News and Events</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">Materials</a>
+                </li>
+                 <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">Blog</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#" class="navbutton__link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <header>     
+        <div class = "logo">
+            <img src="img/logo.png" alt= "Ambas logo" class = "logo-img">           
+        </div>
+    </header>
+    
+    <section class = "page">
+        <div class = "col span-3-of-4">
+            <div id = "head">
+                <h1>Materials</h1>
+            </div>     
+            <div class = "row">  
+                    <h2>Tools </h2>
+                    <div class= "Material">
+                        <div class = "material-picture">
+                           <a href="#">
+                                <img src="img/material1.jpg" alt="student jumping picture">
+                               <div class = "material-p">
+                                    <p class = "link_aa">Tools for promoting South-West Finland as a great place to study and do research</p>
+                                </div>   
+                            </a>
+                        </div>
+                        
+                        <div class = "material-picture">
+                            <a href="#" >
+                                <img src="img/material2.jpg" alt = "city picture">
+                                <div class = "material-p">
+                                    <p class = "link_aa">Tools for promoting South-West Finland as a great place to do business</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class = "material-picture">
+                            <a href="#">
+                                <img src="img/material3.jpg" alt = "aaaa">
+                                <div class= "material-p" >
+                                   <p class = "link_aa">Tools for promoting South-West Finland as a great place to visit</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class = "material-text">
+                            <h2>Everything you need to spread the good word about Finland</h2>
+                            <ul>
+                                <li><a href="http://toolbox.finland.fi/">Toolbox Finland Website</a></li>
+                                <li><a href="http://finland.fi/category/facts-stats-and-info/">This is Finland</a></li>
+                                <li><a href="http://www.investinfinland.fi/main.php">Invest in Finland</a></li>
+                                <li><a href="http://www.visitfinland.com/">Visit Finland</a></li>
+                                <li><a href="http://www.studyinfinland.fi/">Study in Finland</a></li>
+                             </ul>
+
+
+                            <h2>Working in Finland</h2>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=f04jviKad64">General information</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=GKs2pue66Kk">Working life </a></li>
+                                <li><a href="https://www.youtube.com/watch?v=WgQOlFt2lnk">Job hunting</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=tAIdCU7yqvk">Contract of employment </a></li>           
+                            </ul>   
+                        </div>    
+                        
+                    </div>
+                    
+                </div>
+        </div>
+            
+        <div class="col span-1-of-4">
+                <div class="section-news">
+                    <p>
+                    <b>The Ambassador events in spring 2018: 
+                    We are updating this list all the time, keep updated!</b>
+                    </p>
+                    <ul class="section-news__list">
+                        <li>23th January pm. "Get-together"</li>
+                        <li>
+                                24th January 9 am. "International student as a resource for expanding companies" <a href="https://blogs2.abo.fi/polku/2018/01/09/seminar-24-1-2018/" class="link_a">POLKU seminar</a>
+                        </li>
+                    </ul>
+                     
+                    <p>
+                        These events are for the Student Ambassadors of South-West Finland. For more information please see the contact page.
+                    </p>
+                </div>
+        </div>
+    </section>
+
+</body>
+</html>

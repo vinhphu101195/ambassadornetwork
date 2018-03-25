@@ -1,0 +1,93 @@
+.row {
+	font-size: $font-size-small;
+	width: 70%;
+	@include respond(screen-768) {
+		width: 100%;
+	}
+	margin: 0 auto;
+	max-width: 180rem;
+	&:not(:last-child) {
+		margin-bottom: $space-vertical;
+	} // Selector
+	// symbol:
+	// vd [class^="col-"] dau ^ chon tat ca cac ele bat dau bang col-
+	// vd [class*="col-"] dau ^ chon tat ca cac ele chua string col-
+	// vd [class$="col-"] dau ^ chon tat ca cac ele ket thuc bang col-
+	[class^="col-"] {
+		float: left;
+		&:not(:last-child) {
+			margin-right: $space-horizontal;
+		}
+
+		@include respond(screen-320) {
+			
+			&:not(:last-child) {
+				margin-right: $space-horizontal-small;
+			}
+
+			
+		}
+	}
+	@include clearfix; //  2
+	.col-1-of-2 {
+		width: calc((100% - #{$space-horizontal}) / 2);
+	} // 3
+	.col-1-of-3 {
+		width: calc((100% - (2 * #{$space-horizontal})) / 3);
+	}
+	.col-2-of-3 {
+		width: calc( ( 2 * (100% - (2 * #{$space-horizontal})) / 3) + #{$space-horizontal});
+	} // 4
+	.col-1-of-4 {
+		width: calc((100% - (3 * #{$space-horizontal})) / 4);
+	}
+	.col-2-of-4 {
+		width: calc( ( 2 * (100% - (3 * #{$space-horizontal}))) / 4 + #{$space-horizontal});
+	}
+	.col-3-of-4 {
+		width: calc( ( 3 * (100% - (3 * #{$space-horizontal}))) / 4 + (2 * #{$space-horizontal}));
+	}
+	@include respond(screen-768) {
+		[class^="a-col-sm"] {
+			float: left;
+			&:not(:last-child) {
+				margin-right: 0 !important;
+			}
+		}
+		.a-col-sm-4 {
+			width: calc((100% - (3 * #{$space-horizontal})) / 4) !important;
+		}
+	}
+	@include respond(screen-320) {
+		[class^="a-col-sm"] {
+			float: left;
+			&:not(:last-child) {
+				margin-right: 0 !important;
+			}
+		}
+		.a-col-sm-4 {
+			width: calc((100% - (3 * #{$space-horizontal-small})) / 4) !important;
+		}
+	}
+}
+
+.row {
+	.col-1-of-4 {
+		@include respond(screen-768) {
+			width: 100%;
+			&:not(:last-child) {
+				padding-bottom: 2rem;
+				height: 100%;
+			}
+		}
+	}
+	.col-3-of-4 {
+		@include respond(screen-768) {
+			width: 100%;
+			&:not(:last-child) {
+				padding-bottom: 2rem;
+				height: 100%;
+			}
+		}
+	}
+}

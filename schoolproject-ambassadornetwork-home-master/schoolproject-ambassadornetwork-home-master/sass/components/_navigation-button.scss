@@ -1,0 +1,112 @@
+.navbutton {
+    // Nav Button
+    &__checkbox {
+        display: none;
+    }
+    &__background {
+        z-index: 1000;
+        position: fixed;
+        top: 3.5rem;
+        right: 3.5rem;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        background-image: radial-gradient(rgba($color-blue-2, .7), rgba($color-blue-2, .7));
+        transition: all .2s ease;
+    }
+    &__button {
+        z-index: 1500;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        box-shadow: .1rem .5rem .7rem rgba($color: #000000, $alpha: .1);
+        background-color: $color-white-1;
+    } // Icon
+    &__icon {
+        @include center-element;
+        &,
+        &::before,
+        &::after {
+            position: relative;
+            display: block;
+            background-color: $color-grey-1;
+            width: 4rem;
+            height: .4rem;
+            transition: all .5s;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 1rem;
+            left: 0rem;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -1rem;
+            left: 0rem;
+        }
+    }
+    &__checkbox:checked~&__background {
+        transform: scale(200, 200);
+    }
+    &__checkbox:checked~&__button &__icon {
+        background-color: transparent;
+    }
+    &__checkbox:checked~&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked~&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    &__checkbox:checked~&__nav {
+        z-index: 1200;
+        width: 100%;
+        right: 0;
+    } // Navlist
+    &__nav {
+        position: fixed;
+        top: 0;
+        right: -10rem; // width: 100%;
+        height: 100vh;
+        transition: all .4s cubic-bezier(.75, 1.51, .92, .94);
+    }
+    &__list {
+        @include center-element;
+    }
+    &__item {
+        transition: all .4s;
+        text-align: center;
+        list-style: none;
+        padding: 2rem 4rem;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white-1 50%);
+        background-size: 250%;
+        &:hover {
+            background-position: 100%;
+        }
+    }
+    &__item:hover>&__link {
+        color: $color-blue-1 !important;
+        transform: translateX(0);
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+    &__link {
+        font-size: $font-size-medium;
+        transition: all .4s cubic-bezier(.75, 1.51, .92, .94);
+        transform: translateX(-2rem);
+        display: inline-block;
+        &,
+        &:visited,
+        &:link {
+            color: $color-white-1;
+            text-decoration: none;
+        }
+    }
+}

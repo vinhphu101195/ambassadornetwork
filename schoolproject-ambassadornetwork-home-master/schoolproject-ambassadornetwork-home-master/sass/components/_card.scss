@@ -1,0 +1,78 @@
+.card {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 21rem;
+    height: 21rem;
+    @include respond (screen-650) {
+        width: 100%;
+        height: 15rem;
+        font-size: 1.5rem;
+    }
+
+    background-color: $color-white-1;
+    border-radius: .5rem;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+    &__top {
+        position: relative;
+        height: 39%;
+        background-color: transparent;
+        &__heading {
+            position: absolute;
+            padding: 2rem .5rem;
+            color: $color-blue-1;
+            transform: scale(.9);
+        }
+    }
+    &__bottom {
+        background-color: $color-blue-1;
+        transition: all .4s;
+        height: 140%;
+        &__image {
+            widows: 16.5rem;
+            height: 100%;
+            padding: .5rem;
+            transition: all .3s;
+            transition-delay: .1s;
+            &--1 {
+                height: 100%;
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-image: url(../img/symboli_benefits.png);
+            }
+            &--2 {
+                height: 100%;
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-image: url(../img/symboli_for_students.png);
+            }
+            &--3 {
+                height: 100%;
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-image: url(../img/symboli_news.png);
+            }
+            &--4 {
+                height: 100%;
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-image: url(../img/symboli_toolbox.png);
+            }
+        }
+    }
+    &:hover &__bottom {
+        transform: translateY(-10rem);
+    }
+    &:hover &__bottom__image {
+        transform: translateY(9rem);
+    }
+    &:hover &__top__heading {
+        color: $color-white-1;
+        text-transform: uppercase;
+        font-weight: 800;
+        z-index: 100;
+        @include respond (screen-650) {
+            font-weight: 400;
+            text-transform: none;
+        }
+    }
+}

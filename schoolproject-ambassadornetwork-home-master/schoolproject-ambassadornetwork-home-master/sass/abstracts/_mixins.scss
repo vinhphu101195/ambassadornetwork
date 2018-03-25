@@ -1,0 +1,85 @@
+@mixin clearfix {
+    // them vao 1 pseudo ele dang sau 1 ele de tao ra height cho ele bi float
+    &::after {
+        // bat buoc
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin center-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Media query manager
+/*
+
+	0 - 600px		: Phone
+	600 - 900px		: Tablet portrait
+	900 - 1200px	: Tablet landscape
+	[1200 : 1800] 	: is where our normal styles apple
+	1800px + 		: Big desktop
+
+	$breakpoint arguement choices:
+	+ phone
+	+ tab-port
+	+ tab-land
+	+ big-desktop
+	// em is the best option for media query 
+	// rem sometimes fail is some browser
+
+	ORDER: Base + typography >general layout + grid > page layout > components
+
+*/
+
+@mixin respond($breakpoint) {
+    @if ($breakpoint==screen-320) {
+        @media (max-width: 16em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-425) {
+        @media (max-width: 21.2em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-650) {
+        @media (max-width: 32.5em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-768) {
+        @media (max-width: 38.4em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-1024) {
+        @media (max-width: 51.2m) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-1200) {
+        @media (max-width: 60em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-1440) {
+        @media (max-width: 72em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-1800) {
+        @media (max-width: 90em) {
+            @content;
+        }
+    }
+    @if ($breakpoint==screen-2560) {
+        @media (max-width: 128em) {
+            @content;
+        }
+    }
+}
